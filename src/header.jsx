@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom';
+import './styles/baseStyles.css';
+import './styles/mobileStyles.css';
+import './styles/tablet-styles.css';
+import './styles/desktop-styles.css';
+import './styles/large-screen.css';
+
 
 function Logo() {
     return(
-        <div className="logo-group">
+        <Link to="/">
+            <div className="logo-group">
             <div className="logo">
                 <svg width="75" height="41" viewBox="0 0 75 41" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                 <rect width="74.2004" height="41" fill="transparent"/>
@@ -14,6 +21,7 @@ function Logo() {
               Design&nbsp;Gravitas
             </p>
         </div>
+        </Link>
     );
 }
 
