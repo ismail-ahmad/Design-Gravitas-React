@@ -100,12 +100,12 @@
       padding: 0 16px;
       height: 100%;
       justify-content: space-evenly;
-      padding-bottom: 50px;
+      /* padding-bottom: 50px; */
       background-color: transparent;
       backdrop-filter: var(--hero-backdrop-filter);
       opacity: 1;
       transition: 700ms all;
-      transform: translateY(10%);
+      transform: translateY(0);
     }
     .hero-section .hero-list{
       width: calc(100vw/12*10 - 32px );
