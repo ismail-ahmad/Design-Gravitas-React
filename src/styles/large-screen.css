@@ -1,3 +1,5 @@
-.nav-menu li{
+@media only screen and (min-width:992px){
+  .nav-menu li{
     padding: 0 16px 0 16px;
   }
+}
