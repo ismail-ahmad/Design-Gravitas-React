@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/baseStyles.css';
 import './styles/mobileStyles.css';
@@ -25,9 +26,9 @@ function Logo() {
     );
 }
 
-function Navbar(){
+function Navbar({isOpen}){
     return(
-    <nav className="nav-menu">      
+    <nav className={`nav-menu ${isOpen ? "nav-menu-open" : "" }`}>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="#services">Services</Link></li>
@@ -45,21 +46,31 @@ function HeaderCTA() {
     </div>
     );
 }
+function MenuCloseButton({isOpen, togglemenu}) {
+  return(
+    <div onClick={togglemenu} className = {`menu-close-button ${isOpen ? "menu-close-button-visible" : ""}`}></div>
+  );
+}
 
-function MenuOpenButton() {
+function MenuOpenButton({togglemenu}) {
     return(
-        <svg className="menu-open-button" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        <svg className="menu-open-button" onClick={togglemenu} xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
     );
 }
     
 
   function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggle = () => {
+      setMenuOpen(menuOpen ? false : true);
+    }
     return(
         <>
            <header className="header">
                <Logo />
-               <Navbar />
-               <MenuOpenButton />
+               <Navbar isOpen = {menuOpen} />
+               <MenuOpenButton togglemenu = {toggle} />
+               <MenuCloseButton isOpen = {menuOpen} togglemenu = {toggle} />
                <HeaderCTA />
            </header>
         </>
