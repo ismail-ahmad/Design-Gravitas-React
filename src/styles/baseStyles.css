@@ -65,6 +65,9 @@
   header .button-container{
     display: none;
   }
+  .hero-section ul{
+    list-style-image: url('/src/assets/checkmark.svg');
+  }
   .hero-section .hero-cta{
     color: var(--white);
     border: none;
@@ -245,7 +248,7 @@ footer .footer-heading{
   }
 
   .wcu-card ul{
-      list-style-image: url('../assets/checkmark.svg');
+      list-style-image: url('/src/assets/checkmark.svg');
       list-style-position: outside;
   }
   .wcu-card li{
