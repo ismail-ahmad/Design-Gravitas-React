@@ -5,6 +5,7 @@ import './styles/mobileStyles.css';
 import './styles/tablet-styles.css';
 import './styles/desktop-styles.css';
 import './styles/large-screen.css';
+import CTAButton from './ctaButton.jsx';
 
 
 function Logo() {
@@ -41,9 +42,7 @@ function Navbar({isOpen}){
 
 function HeaderCTA() {
     return(
-    <div className="cta-button-container" style={{backgroundColor: "transparent"}}>
-      <button className="cta-button" onClick={() => {window.location.href = 'https://calendar.app.google/zWsnSGkvrX9SMKug6'}}>Book a Consultation</button>
-    </div>
+      <CTAButton classNames={"cta-button hero-cta"} text="Book a Consultation" onclick={() => {window.location.href = 'https://calendar.app.google/zWsnSGkvrX9SMKug6'}} />
     );
 }
 function MenuCloseButton({isOpen, togglemenu}) {

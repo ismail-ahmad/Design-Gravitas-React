@@ -3,6 +3,7 @@ import './styles/mobileStyles.css';
 import './styles/tablet-styles.css';
 import './styles/desktop-styles.css';
 import './styles/large-screen.css';
+import CTAButton from './ctaButton.jsx';
 
 
 function Hero() {
@@ -24,9 +25,7 @@ function Hero() {
             <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.39939 13.5005L0 7.10107L1.59985 5.50123L6.39939 10.3008L16.7002 0L18.3 1.59985L6.39939 13.5005Z" fill="#FF7043"/></svg>
                 <i>Grow</i> your Business</li>
         </ul>
-        <div className="button-container">
-          <button className="cta-button hero-cta" onClick={() => {window.location.href='mailto:ismail.ahmad@designgravitas.com'}}>Get a Free Quote</button>
-        </div>
+        <CTAButton classNames={"cta-button hero-cta"} onclick={() => {window.location.href='mailto:ismail.ahmad@designgravitas.com'}} text="Get a Free Quote" />
       </div>
       </div>
     </section>

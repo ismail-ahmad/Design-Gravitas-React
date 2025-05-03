@@ -62,6 +62,9 @@
     color: var(--body-text-color);
     font-size:var(--logo-text-font-size-mobile);
   }
+  header .button-container{
+    display: none;
+  }
   .hero-section .hero-cta{
     color: var(--white);
     border: none;
