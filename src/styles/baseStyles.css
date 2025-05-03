@@ -245,7 +245,7 @@ footer .footer-heading{
   }
 
   .wcu-card ul{
-      list-style-image: url('../checkmark.svg');
+      list-style-image: url('../assets/checkmark.svg');
       list-style-position: outside;
   }
   .wcu-card li{
