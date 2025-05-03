@@ -225,12 +225,12 @@ footer{
 /* Intersection styles */
 
 .contact-container, .service-container{
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 0;
+    transform: translateX(-100%);
     }
 
 
-    .show{
+    .desktopshow{
     opacity: 1;
     transform: translateX(0);
     transition: all 500ms;
