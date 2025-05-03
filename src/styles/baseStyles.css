@@ -68,6 +68,7 @@
   }
   .hero-section ul{
     list-style-image: url('/src/assets/checkmark.svg');
+    list-style-position: inside;
   }
   .hero-section .hero-cta{
     color: var(--white);
