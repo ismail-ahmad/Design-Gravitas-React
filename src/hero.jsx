@@ -21,9 +21,10 @@ function Hero() {
       el.current.style.opacity = "1";
       el.current.style.transform = "translateX(0)";
     });
-    if(heroCTA.current) {
       heroCTA.current.style.opacity = "1";
-    }
+      setTimeout(() => {
+        heroCTA.current.style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
+      }, 2000);
   }, []);
     return(
         <>
