@@ -10,7 +10,7 @@ function CardContainer({listItems, title}) {
   const [rotation, setRotation] = useState(false);
   return(
     <div onMouseEnter={() => {setmouseenter(true)}} onMouseLeave={() => {setmouseenter(false); setRotation(false)}} className="wcu-card card-container">
-            <div className={`card ${rotation ? "flip": ""}`} onMouseUp={() => {setRotation(true)}}>
+            <div className={`card ${rotation ? "flip": ""} ${mouseenter ? 'card-mouseenter': ""}`} onMouseUp={() => {setRotation(true)}}>
               <div className="card-face card-front">
                 <h3 className="wcu-card-heading card-front">{title}</h3>
               </div>

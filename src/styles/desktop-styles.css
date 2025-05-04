@@ -264,6 +264,9 @@ footer{
     .flip{
       transform: rotateY(180deg);
     }
+    .card-mouseenter{
+      border-width: 3px;
+    }
     .wcu-card:hover .card::after{
       opacity: 1;
     }
