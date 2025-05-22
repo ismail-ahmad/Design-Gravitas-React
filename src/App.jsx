@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
+import Header from "./header";
+import { SharedIntersectionObserverProvider } from './sharedIntersectionObserver';
 
-function App() {
-
+const App = () => {
   return(
-    <>
-      <h1>hey</h1>
-      
-    </>
+    <SharedIntersectionObserverProvider threshold={1}>
+    <Header />
+    </SharedIntersectionObserverProvider>
   );
 }
+
 
 export default App;
