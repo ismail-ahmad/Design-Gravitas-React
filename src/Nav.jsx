@@ -4,9 +4,9 @@ import { themeContext } from "./theme";
 
 const Nav = () => {
   const {theme} = useContext(themeContext);
-    const list = ['Home', 'Services', 'Contact', 'About'];
+    const list = ['Home', 'Services', 'Contact', 'About', 'Blog'];
     return(
-        <nav className={`${theme}-theme`}>
+        <nav>
             <ul
               style={{
                 listStyleType: 'none',
